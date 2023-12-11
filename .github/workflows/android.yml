@@ -3,10 +3,10 @@ name: Android Build and Test
 on:
   push:
     branches:
-      - main  # Change to your main branch name
+      - master  # Replace with your main branch name
   pull_request:
     branches:
-      - main  # Change to your main branch name
+      - master  # Replace with your main branch name
 
 jobs:
   build:
