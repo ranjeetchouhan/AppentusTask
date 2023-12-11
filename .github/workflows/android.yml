@@ -1,0 +1,16 @@
+image: openjdk:11  # Choose the Java version required for your Android project
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build
+          caches:
+            - gradle
+          script:
+            - apt-get update && apt-get install -y unzip
+            - wget https://services.gradle.org/distributions/gradle-<YOUR_GRADLE_VERSION>-bin.zip
+            - unzip -qq gradle-<YOUR_GRADLE_VERSION>-bin.zip
+            - export GRADLE_HOME=$PWD/gradle-<YOUR_GRADLE_VERSION>
+            - export PATH=$GRADLE_HOME/bin:$PATH
+            - ./gradlew clean assembleDebug
