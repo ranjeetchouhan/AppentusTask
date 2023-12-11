@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
     var imageAdapter : ImageGridAdapter? = null
     var imageData = ArrayList<ImageData>()
     lateinit var gridLayoutManager : GridLayoutManager
-
+    var test = "Ranjeet"
     private val VISIBLE_THRESHOLD = 1
     private var lastVisibleItem = 0
     private  var totalItemCount:Int = 0
